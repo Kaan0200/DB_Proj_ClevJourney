@@ -1,0 +1,3 @@
+Run intial DB setup on an empty database,
+
+then run the initial DB DataValues to populate databases
