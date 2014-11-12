@@ -102,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 190);
+            this.label3.Location = new System.Drawing.Point(208, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 17);
             this.label3.TabIndex = 8;
@@ -146,10 +146,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox NewPlayerTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox SelectPlayerComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TitleLabel;
+        public System.Windows.Forms.ComboBox SelectPlayerComboBox;
     }
 }
 
