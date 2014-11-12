@@ -13,15 +13,17 @@ namespace Databases_Project
 {
     public partial class StartScreen : Form
     {
+
+        List<String> UserList = new List<String>(); // this is the list of database Users
+        String connectionString; //  the connection string that will be used to access DB
+
+
         public StartScreen()
         {
             InitializeComponent();
 
-            string connectionString;
             SqlConnection cnn; // make the connection object
             SqlDataReader reader;
-            List<String> UserList = new List<string>(); // list of strings to hold the names
-
 
             //"Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
             connectionString = "Data Source=KAAN-HP\\SQLEXPRESS;Initial Catalog=JourneyGame_DBClass;User ID=Kaan;Password=admin";
@@ -36,7 +38,6 @@ namespace Databases_Project
             {
                 cnn.Open(); // start the connection
                 reader = cmd.ExecuteReader();
-
 
                 if (reader.HasRows) // validate that it returned something
                 {
@@ -54,17 +55,35 @@ namespace Databases_Project
             }
 
             SelectPlayerComboBox.DataSource = UserList;
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var name = NewPlayerTextBox.Text;
 
+            // this is a predicate, anonymous function, logically reads "In UserList return true if any thing in the
+            // list equals name.
+            if (UserList.Any(s => s.Equals(name))){
+                throw new Exception("There already exists a player with that name");
+            }
+
+            SqlConnection cnn; // make the connection object
+
+            connectionString = "Data Source=KAAN-HP\\SQLEXPRESS;Initial Catalog=JourneyGame_DBClass;User ID=Kaan;Password=admin";
+            SqlCommand cmd = new SqlCommand();
+            cnn = new SqlConnection(connectionString);
+
+            cmd.CommandText = "EXEC New_Player "+name;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
+
             //this.Hide();
             var GameScreen = new GameScreen(); // make a new game screen
             GameScreen.Show(); // open the other
+
+
         }
     }
 }

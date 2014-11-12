@@ -1,3 +1,9 @@
 Run intial DB setup on an empty database,
 
-then run the initial DB DataValues to populate databases
+then run the initial DB DataValues to populate databases.
+
+In order to set up your DB for use with the application you need to set up another application user.  Under security > Logins, right click, create a new user.  Give it a easy user and password (doesn't need to be real).
+
+Then on the Server Object, this is <PCNAME\SQLEXPRESS>, right click, select properties > Security, and change the server authentication to SQL Server and Windows Authentication.  Restart the server by right clicking it.
+
+Test that you can log into the server on your new username and password.
