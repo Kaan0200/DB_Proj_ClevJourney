@@ -18,5 +18,7 @@ namespace Databases_Project
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartScreen());
         }
+        //"Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
+        public static String connectionString = "Data Source=KAAN-HP\\SQLEXPRESS;Initial Catalog=JourneyGame_DBClass;User ID=Kaan;Password=admin";
     }
 }

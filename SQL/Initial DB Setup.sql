@@ -7,13 +7,14 @@ CREATE TABLE Player (
 GO
 
 CREATE TABLE Traveler (
-	Name        varchar  PRIMARY KEY,
+	Name        varchar(100),
 	Warmth      float(3), -- 00.0 float
 	Hunger      float(3), -- 00.0 float
 	Health      float(3), -- 00.0 float
 	Illness_Chance float,
 	Status_id   int, 
-	Player_Name varchar,
+	Player_Name varchar(100),
+	CONSTRAINT PK_PlayerTraveler PRIMARY KEY (Player_Name, Name)
 );
 
 GO

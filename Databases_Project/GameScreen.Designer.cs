@@ -45,9 +45,8 @@
             this.SpecialButton = new System.Windows.Forms.Button();
             this.WaitDayButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Health = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.journeyGame_DBClassDataSet = new Databases_Project.JourneyGame_DBClassDataSet();
             this.CrewLabel = new System.Windows.Forms.Label();
             this.InventoryListBox = new System.Windows.Forms.ListBox();
             this.InventoryLabel = new System.Windows.Forms.Label();
@@ -55,17 +54,15 @@
             this.UseItemButton = new System.Windows.Forms.Button();
             this.LogLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.journeyGame_DBClassDataSet = new Databases_Project.JourneyGame_DBClassDataSet();
-            this.crewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crewTableAdapter = new Databases_Project.JourneyGame_DBClassDataSetTableAdapters.CrewTableAdapter();
-            this.memberidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.healthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HungerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HealthColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.journeyGame_DBClassDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journeyGame_DBClassDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,7 +72,7 @@
             this.devControlsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(782, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(843, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -116,14 +113,14 @@
             // 
             // LogPanel
             // 
-            this.LogPanel.Location = new System.Drawing.Point(250, 40);
+            this.LogPanel.Location = new System.Drawing.Point(312, 52);
             this.LogPanel.Name = "LogPanel";
             this.LogPanel.Size = new System.Drawing.Size(300, 250);
             this.LogPanel.TabIndex = 1;
             // 
             // ProgressBar
             // 
-            this.ProgressBar.Location = new System.Drawing.Point(250, 313);
+            this.ProgressBar.Location = new System.Drawing.Point(312, 325);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(300, 34);
             this.ProgressBar.TabIndex = 2;
@@ -131,7 +128,7 @@
             // ProgressLabel
             // 
             this.ProgressLabel.AutoSize = true;
-            this.ProgressLabel.Location = new System.Drawing.Point(247, 293);
+            this.ProgressLabel.Location = new System.Drawing.Point(309, 305);
             this.ProgressLabel.Name = "ProgressLabel";
             this.ProgressLabel.Size = new System.Drawing.Size(120, 17);
             this.ProgressLabel.TabIndex = 3;
@@ -139,7 +136,7 @@
             // 
             // NextDayButton
             // 
-            this.NextDayButton.Location = new System.Drawing.Point(250, 364);
+            this.NextDayButton.Location = new System.Drawing.Point(312, 376);
             this.NextDayButton.Name = "NextDayButton";
             this.NextDayButton.Size = new System.Drawing.Size(300, 30);
             this.NextDayButton.TabIndex = 4;
@@ -148,7 +145,7 @@
             // 
             // SpecialButton
             // 
-            this.SpecialButton.Location = new System.Drawing.Point(420, 403);
+            this.SpecialButton.Location = new System.Drawing.Point(482, 415);
             this.SpecialButton.Name = "SpecialButton";
             this.SpecialButton.Size = new System.Drawing.Size(130, 30);
             this.SpecialButton.TabIndex = 5;
@@ -157,7 +154,7 @@
             // 
             // WaitDayButton
             // 
-            this.WaitDayButton.Location = new System.Drawing.Point(250, 403);
+            this.WaitDayButton.Location = new System.Drawing.Point(312, 415);
             this.WaitDayButton.Name = "WaitDayButton";
             this.WaitDayButton.Size = new System.Drawing.Size(130, 30);
             this.WaitDayButton.TabIndex = 6;
@@ -166,7 +163,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,14 +173,10 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
-            this.Status,
-            this.Health,
-            this.memberidDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.healthDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.crewBindingSource;
+            this.NameColumn,
+            this.HungerColumn,
+            this.StatusColumn,
+            this.HealthColumn});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,7 +185,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 72);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -205,32 +197,24 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 4;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(232, 373);
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dataGridView1.Size = new System.Drawing.Size(294, 373);
             this.dataGridView1.TabIndex = 7;
             // 
-            // Name
+            // crewBindingSource
             // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.Width = 80;
+            this.crewBindingSource.DataMember = "Crew";
+            this.crewBindingSource.DataSource = this.journeyGame_DBClassDataSet;
             // 
-            // Status
+            // journeyGame_DBClassDataSet
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Width = 90;
-            // 
-            // Health
-            // 
-            this.Health.HeaderText = "Health";
-            this.Health.Name = "Health";
-            this.Health.Width = 60;
+            this.journeyGame_DBClassDataSet.DataSetName = "JourneyGame_DBClassDataSet";
+            this.journeyGame_DBClassDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CrewLabel
             // 
             this.CrewLabel.AutoSize = true;
-            this.CrewLabel.Location = new System.Drawing.Point(6, 40);
+            this.CrewLabel.Location = new System.Drawing.Point(6, 52);
             this.CrewLabel.Name = "CrewLabel";
             this.CrewLabel.Size = new System.Drawing.Size(68, 17);
             this.CrewLabel.TabIndex = 8;
@@ -241,7 +225,7 @@
             // 
             this.InventoryListBox.FormattingEnabled = true;
             this.InventoryListBox.ItemHeight = 16;
-            this.InventoryListBox.Location = new System.Drawing.Point(556, 60);
+            this.InventoryListBox.Location = new System.Drawing.Point(618, 72);
             this.InventoryListBox.Name = "InventoryListBox";
             this.InventoryListBox.Size = new System.Drawing.Size(214, 228);
             this.InventoryListBox.TabIndex = 9;
@@ -249,7 +233,7 @@
             // InventoryLabel
             // 
             this.InventoryLabel.AutoSize = true;
-            this.InventoryLabel.Location = new System.Drawing.Point(556, 40);
+            this.InventoryLabel.Location = new System.Drawing.Point(618, 52);
             this.InventoryLabel.Name = "InventoryLabel";
             this.InventoryLabel.Size = new System.Drawing.Size(66, 17);
             this.InventoryLabel.TabIndex = 10;
@@ -258,7 +242,7 @@
             // 
             // TossItemButton
             // 
-            this.TossItemButton.Location = new System.Drawing.Point(556, 294);
+            this.TossItemButton.Location = new System.Drawing.Point(618, 306);
             this.TossItemButton.Name = "TossItemButton";
             this.TossItemButton.Size = new System.Drawing.Size(214, 30);
             this.TossItemButton.TabIndex = 11;
@@ -268,7 +252,7 @@
             // UseItemButton
             // 
             this.UseItemButton.Enabled = false;
-            this.UseItemButton.Location = new System.Drawing.Point(556, 330);
+            this.UseItemButton.Location = new System.Drawing.Point(618, 342);
             this.UseItemButton.Name = "UseItemButton";
             this.UseItemButton.Size = new System.Drawing.Size(214, 30);
             this.UseItemButton.TabIndex = 12;
@@ -278,7 +262,7 @@
             // LogLabel
             // 
             this.LogLabel.AutoSize = true;
-            this.LogLabel.Location = new System.Drawing.Point(247, 20);
+            this.LogLabel.Location = new System.Drawing.Point(309, 32);
             this.LogLabel.Name = "LogLabel";
             this.LogLabel.Size = new System.Drawing.Size(76, 17);
             this.LogLabel.TabIndex = 13;
@@ -287,56 +271,47 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(562, 366);
+            this.groupBox1.Location = new System.Drawing.Point(624, 378);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(207, 66);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // journeyGame_DBClassDataSet
-            // 
-            this.journeyGame_DBClassDataSet.DataSetName = "JourneyGame_DBClassDataSet";
-            this.journeyGame_DBClassDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // crewBindingSource
-            // 
-            this.crewBindingSource.DataMember = "Crew";
-            this.crewBindingSource.DataSource = this.journeyGame_DBClassDataSet;
-            // 
             // crewTableAdapter
             // 
             this.crewTableAdapter.ClearBeforeFill = true;
             // 
-            // memberidDataGridViewTextBoxColumn
+            // NameColumn
             // 
-            this.memberidDataGridViewTextBoxColumn.DataPropertyName = "member_id";
-            this.memberidDataGridViewTextBoxColumn.HeaderText = "member_id";
-            this.memberidDataGridViewTextBoxColumn.Name = "memberidDataGridViewTextBoxColumn";
+            this.NameColumn.HeaderText = "Name";
+            this.NameColumn.Name = "NameColumn";
+            this.NameColumn.Width = 80;
             // 
-            // nameDataGridViewTextBoxColumn
+            // HungerColumn
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.HungerColumn.HeaderText = "Hunger";
+            this.HungerColumn.Name = "HungerColumn";
+            this.HungerColumn.Width = 80;
             // 
-            // statusDataGridViewTextBoxColumn
+            // StatusColumn
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.StatusColumn.HeaderText = "Status";
+            this.StatusColumn.Name = "StatusColumn";
+            this.StatusColumn.Width = 90;
             // 
-            // healthDataGridViewTextBoxColumn
+            // HealthColumn
             // 
-            this.healthDataGridViewTextBoxColumn.DataPropertyName = "health";
-            this.healthDataGridViewTextBoxColumn.HeaderText = "health";
-            this.healthDataGridViewTextBoxColumn.Name = "healthDataGridViewTextBoxColumn";
+            this.HealthColumn.HeaderText = "Health";
+            this.HealthColumn.Name = "HealthColumn";
+            this.HealthColumn.Width = 60;
             // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 444);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(843, 454);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LogLabel);
             this.Controls.Add(this.UseItemButton);
@@ -353,13 +328,14 @@
             this.Controls.Add(this.LogPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.Load += new System.EventHandler(this.GameScreen_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.journeyGame_DBClassDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journeyGame_DBClassDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,9 +356,6 @@
         private System.Windows.Forms.Button SpecialButton;
         private System.Windows.Forms.Button WaitDayButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Health;
         private System.Windows.Forms.Label CrewLabel;
         private System.Windows.Forms.ListBox InventoryListBox;
         private System.Windows.Forms.Label InventoryLabel;
@@ -393,9 +366,9 @@
         private JourneyGame_DBClassDataSet journeyGame_DBClassDataSet;
         private System.Windows.Forms.BindingSource crewBindingSource;
         private JourneyGame_DBClassDataSetTableAdapters.CrewTableAdapter crewTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn memberidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn healthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HungerColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HealthColumn;
     }
 }

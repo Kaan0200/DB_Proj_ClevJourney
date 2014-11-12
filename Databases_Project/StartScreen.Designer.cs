@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.deletePlayerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -119,11 +120,23 @@
             this.TitleLabel.Text = "Cleveland Trail";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // deletePlayerButton
+            // 
+            this.deletePlayerButton.ForeColor = System.Drawing.Color.Red;
+            this.deletePlayerButton.Location = new System.Drawing.Point(305, 247);
+            this.deletePlayerButton.Name = "deletePlayerButton";
+            this.deletePlayerButton.Size = new System.Drawing.Size(75, 23);
+            this.deletePlayerButton.TabIndex = 10;
+            this.deletePlayerButton.Text = "Delete";
+            this.deletePlayerButton.UseVisualStyleBackColor = true;
+            this.deletePlayerButton.Click += new System.EventHandler(this.deletePlayerButton_Click);
+            // 
             // StartScreen
             // 
             this.AccessibleName = "";
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(419, 331);
+            this.Controls.Add(this.deletePlayerButton);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -150,6 +163,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TitleLabel;
         public System.Windows.Forms.ComboBox SelectPlayerComboBox;
+        private System.Windows.Forms.Button deletePlayerButton;
     }
 }
 

@@ -25,10 +25,8 @@ namespace Databases_Project
             SqlConnection cnn; // make the connection object
             SqlDataReader reader;
 
-            //"Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
-            connectionString = "Data Source=KAAN-HP\\SQLEXPRESS;Initial Catalog=JourneyGame_DBClass;User ID=Kaan;Password=admin";
             SqlCommand cmd = new SqlCommand();
-            cnn = new SqlConnection(connectionString);
+            cnn = new SqlConnection(Program.connectionString);
 
             cmd.CommandText = "SELECT Player_Name FROM Player";
             cmd.CommandType = CommandType.Text;
@@ -59,21 +57,20 @@ namespace Databases_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var name = NewPlayerTextBox.Text;
+            var name = NewPlayerTextBox.Text; // hang onto the text from the input box to make life easier
 
             // this is a predicate, anonymous function, logically reads "In UserList return true if any thing in the
             // list equals name.
             if (UserList.Any(s => s.Equals(name))){
                 throw new Exception("There already exists a player with that name");
             }
-
-            SqlConnection cnn; // make the connection object
-
-            connectionString = "Data Source=KAAN-HP\\SQLEXPRESS;Initial Catalog=JourneyGame_DBClass;User ID=Kaan;Password=admin";
+            
+            // create a new command object
             SqlCommand cmd = new SqlCommand();
-            cnn = new SqlConnection(connectionString);
+            // make the connection obj and get the connection string from the Program Class
+            SqlConnection cnn = new SqlConnection(Program.connectionString); 
 
-            cmd.CommandText = "EXEC New_Player "+name;
+            cmd.CommandText = "EXEC New_Player "+name; // create command
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -82,8 +79,22 @@ namespace Databases_Project
             //this.Hide();
             var GameScreen = new GameScreen(); // make a new game screen
             GameScreen.Show(); // open the other
+        }
 
+        private void deletePlayerButton_Click(object sender, EventArgs e)
+        {
+            var selectedPlayer = SelectPlayerComboBox.SelectedValue;
 
+            // create a new command object
+            SqlCommand cmd = new SqlCommand();
+            // make the connection obj and get the connection string from the Program Class
+            SqlConnection cnn = new SqlConnection(Program.connectionString);
+
+            cmd.CommandText = "EXEC Delete_Player " + selectedPlayer; // create command 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
         }
     }
 }
