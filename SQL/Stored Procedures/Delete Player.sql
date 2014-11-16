@@ -1,6 +1,8 @@
 CREATE PROC Delete_Player (@P_Name varchar(100))
 AS
-	-- do the delete
+	-- delete the user
+	-- delete the travelers with this user
+	-- delete the inventory with this user
 
 GO
 

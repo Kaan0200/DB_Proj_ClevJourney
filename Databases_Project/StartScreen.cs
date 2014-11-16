@@ -55,7 +55,7 @@ namespace Databases_Project
             SelectPlayerComboBox.DataSource = UserList;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NewPlayerButton_Click(object sender, EventArgs e)
         {
             var name = NewPlayerTextBox.Text; // hang onto the text from the input box to make life easier
 
@@ -64,20 +64,24 @@ namespace Databases_Project
             if (UserList.Any(s => s.Equals(name))){
                 throw new Exception("There already exists a player with that name");
             }
+            if (String.IsNullOrWhiteSpace(name))
+            {
+                throw new Exception("Must input a valid username");
+            }
             
             // create a new command object
             SqlCommand cmd = new SqlCommand();
             // make the connection obj and get the connection string from the Program Class
             SqlConnection cnn = new SqlConnection(Program.connectionString); 
 
-            cmd.CommandText = "EXEC New_Player "+name; // create command
+            cmd.CommandText = "EXEC New_Player '"+name+"'"; // create command
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
 
             //this.Hide();
-            var GameScreen = new GameScreen(); // make a new game screen
+            var GameScreen = new GameScreen(name); // make a new game screen
             GameScreen.Show(); // open the other
         }
 
@@ -95,6 +99,12 @@ namespace Databases_Project
             cmd.Connection = cnn;
 
             cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
+        }
+
+        private void ResumePlayerButton_Click(object sender, EventArgs e)
+        {
+            var GameScreen = new GameScreen(SelectPlayerComboBox.SelectedItem.ToString()); 
+            GameScreen.Show(); // open the other
         }
     }
 }

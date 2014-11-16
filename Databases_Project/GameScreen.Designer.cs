@@ -44,7 +44,7 @@
             this.NextDayButton = new System.Windows.Forms.Button();
             this.SpecialButton = new System.Windows.Forms.Button();
             this.WaitDayButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.travelersDataView = new System.Windows.Forms.DataGridView();
             this.crewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.journeyGame_DBClassDataSet = new Databases_Project.JourneyGame_DBClassDataSet();
             this.CrewLabel = new System.Windows.Forms.Label();
@@ -55,12 +55,8 @@
             this.LogLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.crewTableAdapter = new Databases_Project.JourneyGame_DBClassDataSetTableAdapters.CrewTableAdapter();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HungerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HealthColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.travelersDataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journeyGame_DBClassDataSet)).BeginInit();
             this.SuspendLayout();
@@ -161,7 +157,7 @@
             this.WaitDayButton.Text = "Wait Day";
             this.WaitDayButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // travelersDataView
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -170,13 +166,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NameColumn,
-            this.HungerColumn,
-            this.StatusColumn,
-            this.HealthColumn});
+            this.travelersDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.travelersDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,9 +175,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 72);
-            this.dataGridView1.Name = "dataGridView1";
+            this.travelersDataView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.travelersDataView.Location = new System.Drawing.Point(9, 72);
+            this.travelersDataView.Name = "travelersDataView";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,12 +185,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersWidth = 4;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView1.Size = new System.Drawing.Size(294, 373);
-            this.dataGridView1.TabIndex = 7;
+            this.travelersDataView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.travelersDataView.RowHeadersWidth = 4;
+            this.travelersDataView.RowTemplate.Height = 24;
+            this.travelersDataView.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.travelersDataView.Size = new System.Drawing.Size(294, 373);
+            this.travelersDataView.TabIndex = 7;
             // 
             // crewBindingSource
             // 
@@ -282,30 +273,6 @@
             // 
             this.crewTableAdapter.ClearBeforeFill = true;
             // 
-            // NameColumn
-            // 
-            this.NameColumn.HeaderText = "Name";
-            this.NameColumn.Name = "NameColumn";
-            this.NameColumn.Width = 80;
-            // 
-            // HungerColumn
-            // 
-            this.HungerColumn.HeaderText = "Hunger";
-            this.HungerColumn.Name = "HungerColumn";
-            this.HungerColumn.Width = 80;
-            // 
-            // StatusColumn
-            // 
-            this.StatusColumn.HeaderText = "Status";
-            this.StatusColumn.Name = "StatusColumn";
-            this.StatusColumn.Width = 90;
-            // 
-            // HealthColumn
-            // 
-            this.HealthColumn.HeaderText = "Health";
-            this.HealthColumn.Name = "HealthColumn";
-            this.HealthColumn.Width = 60;
-            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -319,7 +286,7 @@
             this.Controls.Add(this.InventoryLabel);
             this.Controls.Add(this.InventoryListBox);
             this.Controls.Add(this.CrewLabel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.travelersDataView);
             this.Controls.Add(this.WaitDayButton);
             this.Controls.Add(this.SpecialButton);
             this.Controls.Add(this.NextDayButton);
@@ -333,7 +300,7 @@
             this.Load += new System.EventHandler(this.GameScreen_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.travelersDataView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.journeyGame_DBClassDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -355,7 +322,7 @@
         private System.Windows.Forms.Button NextDayButton;
         private System.Windows.Forms.Button SpecialButton;
         private System.Windows.Forms.Button WaitDayButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView travelersDataView;
         private System.Windows.Forms.Label CrewLabel;
         private System.Windows.Forms.ListBox InventoryListBox;
         private System.Windows.Forms.Label InventoryLabel;
@@ -366,9 +333,5 @@
         private JourneyGame_DBClassDataSet journeyGame_DBClassDataSet;
         private System.Windows.Forms.BindingSource crewBindingSource;
         private JourneyGame_DBClassDataSetTableAdapters.CrewTableAdapter crewTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HungerColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HealthColumn;
     }
 }

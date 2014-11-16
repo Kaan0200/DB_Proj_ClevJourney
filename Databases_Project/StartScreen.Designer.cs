@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.NewPlayerButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ResumePlayerButton = new System.Windows.Forms.Button();
             this.NewPlayerTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SelectPlayerComboBox = new System.Windows.Forms.ComboBox();
@@ -40,15 +40,15 @@
             this.deletePlayerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // NewPlayerButton
             // 
-            this.button1.Location = new System.Drawing.Point(21, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "New Game";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.NewPlayerButton.Location = new System.Drawing.Point(21, 146);
+            this.NewPlayerButton.Name = "NewPlayerButton";
+            this.NewPlayerButton.Size = new System.Drawing.Size(169, 37);
+            this.NewPlayerButton.TabIndex = 1;
+            this.NewPlayerButton.Text = "New Game";
+            this.NewPlayerButton.UseVisualStyleBackColor = true;
+            this.NewPlayerButton.Click += new System.EventHandler(this.NewPlayerButton_Click);
             // 
             // button2
             // 
@@ -59,14 +59,15 @@
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // ResumePlayerButton
             // 
-            this.button3.Location = new System.Drawing.Point(21, 197);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Resume Game";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ResumePlayerButton.Location = new System.Drawing.Point(21, 197);
+            this.ResumePlayerButton.Name = "ResumePlayerButton";
+            this.ResumePlayerButton.Size = new System.Drawing.Size(169, 37);
+            this.ResumePlayerButton.TabIndex = 3;
+            this.ResumePlayerButton.Text = "Resume Game";
+            this.ResumePlayerButton.UseVisualStyleBackColor = true;
+            this.ResumePlayerButton.Click += new System.EventHandler(this.ResumePlayerButton_Click);
             // 
             // NewPlayerTextBox
             // 
@@ -143,9 +144,9 @@
             this.Controls.Add(this.SelectPlayerComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NewPlayerTextBox);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ResumePlayerButton);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NewPlayerButton);
             this.Name = "StartScreen";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,9 +155,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NewPlayerButton;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ResumePlayerButton;
         private System.Windows.Forms.TextBox NewPlayerTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

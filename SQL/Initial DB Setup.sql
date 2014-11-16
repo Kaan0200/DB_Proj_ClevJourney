@@ -20,9 +20,9 @@ CREATE TABLE Traveler (
 GO
 
 CREATE TABLE Status (
-	Status_Name varchar,
+	Status_Name varchar(100),
 	Status_Id   int      PRIMARY KEY,
-	Effects     varchar,  -- Types: Health, Hunger, 
+	Effects     varchar(100),  -- Types: Health, Hunger, 
 	Value       float,
 );
 
