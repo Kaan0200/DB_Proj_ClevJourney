@@ -28,11 +28,22 @@ CREATE TABLE Status (
 
 GO
 
+CREATE TABLE Items (
+	Item_ID		varchar(100)		PRIMARY KEY,
+	I_Effects	varchar(100),  -- Types: Food, Medicine
+	Value		float,
+	Cures		varchar(100),  -- If it cures a specific disease, list here
+	Price_avg	int,
+);
+
+GO
+
 CREATE TABLE Inventory (
 	Player_Name varchar(100) NOT NULL,
-	Item_ID  varchar,
+	Item_ID  varchar(100),
 	Quantity int,
-	CONSTRAINT FK_Player_Inventory FOREIGN KEY (Player_Name) REFERENCES Player (Player_Name)
+	CONSTRAINT FK_Player_Inventory FOREIGN KEY (Player_Name) REFERENCES Player (Player_Name),
+	CONSTRAINT FK_Item_Inventory FOREIGN KEY (Item_ID) REFERENCES Items (Item_ID)
 );
 
 GO
