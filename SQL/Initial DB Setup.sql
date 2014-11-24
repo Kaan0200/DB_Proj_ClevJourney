@@ -1,10 +1,11 @@
+CREATE PROC Initial_DB_Setup AS
+
 CREATE TABLE Player (
 	Player_Name varchar(100)  PRIMARY KEY, -- the user playing the game
 	Money       float(3),  -- the ingame money
 	Remaining_Travelers int -- how many people they still have alive, game is over at 0
 );
 
-GO
 
 CREATE TABLE Traveler (
 	Name        varchar(100),
@@ -17,16 +18,12 @@ CREATE TABLE Traveler (
 	CONSTRAINT PK_PlayerTraveler PRIMARY KEY (Player_Name, Name)
 );
 
-GO
-
 CREATE TABLE Status (
 	Status_Name varchar(100),
 	Status_Id   int      PRIMARY KEY,
 	Effects     varchar(100),  -- Types: Health, Hunger, 
 	Value       float,
 );
-
-GO
 
 CREATE TABLE Items (
 	Item_ID		varchar(100)		PRIMARY KEY,
@@ -36,8 +33,6 @@ CREATE TABLE Items (
 	Price_avg	int,
 );
 
-GO
-
 CREATE TABLE Inventory (
 	Player_Name varchar(100) NOT NULL,
 	Item_ID  varchar(100),
@@ -46,12 +41,12 @@ CREATE TABLE Inventory (
 	CONSTRAINT FK_Item_Inventory FOREIGN KEY (Item_ID) REFERENCES Items (Item_ID)
 );
 
-GO
-
 CREATE TABLE Event (
 	E_Id        int     PRIMARY KEY,
 	Chance      float,   -- 
 	Description varchar, -- the user viewed description
 	Type        varchar, -- the type: weather, terrain, 
 	Value       float
-)
+);
+
+GO
