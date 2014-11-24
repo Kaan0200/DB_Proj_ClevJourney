@@ -6,6 +6,11 @@ CREATE TABLE Player (
 	Remaining_Travelers int -- how many people they still have alive, game is over at 0
 );
 
+CREATE TABLE Status (
+	Status_Name varchar(100)     PRIMARY KEY,
+	Effects     varchar(100),  -- Types: Health, Hunger, 
+	Value       float
+);
 
 CREATE TABLE Traveler (
 	Name        varchar(100),
@@ -13,16 +18,10 @@ CREATE TABLE Traveler (
 	Hunger      float(3), -- 00.0 float
 	Health      float(3), -- 00.0 float
 	Illness_Chance float,
-	Status_id   int,   -- I'm wondering about this.  Maybe instead of showing the ID, we should display the name of their status?
+	Status_Name   varchar(100), 
 	Player_Name varchar(100),
-	CONSTRAINT PK_PlayerTraveler PRIMARY KEY (Player_Name, Name)
-);
-
-CREATE TABLE Status (
-	Status_Name varchar(100),
-	Status_Id   int      PRIMARY KEY,
-	Effects     varchar(100),  -- Types: Health, Hunger, 
-	Value       float,
+	CONSTRAINT PK_PlayerTraveler PRIMARY KEY (Player_Name, Name),
+	CONSTRAINT FK_StatusName FOREIGN KEY (Status_Name) REFERENCES Status (Status_Name)
 );
 
 CREATE TABLE Items (
@@ -31,6 +30,7 @@ CREATE TABLE Items (
 	Value		float,
 	Cures		varchar(100),  -- If it cures a specific disease, list here
 	Price_avg	int,
+	CONSTRAINT FK_Cures FOREIGN KEY (Cures) REFERENCES Status (Status_Name)
 );
 
 CREATE TABLE Inventory (
