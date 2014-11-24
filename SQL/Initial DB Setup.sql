@@ -12,7 +12,7 @@ CREATE TABLE Traveler (
 	Hunger      float(3), -- 00.0 float
 	Health      float(3), -- 00.0 float
 	Illness_Chance float,
-	Status_id   int, 
+	Status_id   int,   -- I'm wondering about this.  Maybe instead of showing the ID, we should display the name of their status?
 	Player_Name varchar(100),
 	CONSTRAINT PK_PlayerTraveler PRIMARY KEY (Player_Name, Name)
 );
