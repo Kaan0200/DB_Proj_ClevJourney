@@ -19,6 +19,11 @@ Just a note about some of the backend stuff:
 - Cures (A Status_Name.  If you consume an item that has a 'Cures' field that matches the status of one of your travelers, it will make them healthy again)
 - Average Price (as Price_avg)
 
+**Status**
+- Status_Name (which is the new Primary Key for this table)
+- Effects   (Type of Effect: Health, Hunger, Warmth)
+- Value     (How much it effects the stat that the Effect indicates)
+
 
 ##Procedures
 *All procedures can be called using the following in the query tab: `begin EXEC Procedure_Name 'Parameter' end`*
