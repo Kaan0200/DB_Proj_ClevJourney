@@ -5,7 +5,7 @@ Just a note about some of the backend stuff:
 
 **Traveler**
 - Name
-- Warmth   (Nothing's been done with this yet)
+- Warmth   
 - Hunger
 - Health
 - Illness Chance   (Nothing's been done with this yet)
