@@ -66,4 +66,5 @@ The procedure that will eventually be called by the 'Use Item' button in the mai
 <dd>
 Afflicts the given Traveler with the given status.
 </dd>
+</d1>
 Project for Databases class @ CWRU
