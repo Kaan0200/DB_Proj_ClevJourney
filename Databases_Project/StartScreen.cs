@@ -106,5 +106,15 @@ namespace Databases_Project
             var GameScreen = new GameScreen(SelectPlayerComboBox.SelectedItem.ToString()); 
             GameScreen.Show(); // open the other
         }
+
+        private void StartScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

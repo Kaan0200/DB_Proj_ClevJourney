@@ -73,7 +73,7 @@
             // 
             this.NewPlayerTextBox.Location = new System.Drawing.Point(211, 161);
             this.NewPlayerTextBox.Name = "NewPlayerTextBox";
-            this.NewPlayerTextBox.Size = new System.Drawing.Size(170, 22);
+            this.NewPlayerTextBox.Size = new System.Drawing.Size(170, 20);
             this.NewPlayerTextBox.TabIndex = 4;
             // 
             // label1
@@ -81,7 +81,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(208, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "New Player Name:";
             // 
@@ -90,7 +90,7 @@
             this.SelectPlayerComboBox.FormattingEnabled = true;
             this.SelectPlayerComboBox.Location = new System.Drawing.Point(211, 210);
             this.SelectPlayerComboBox.Name = "SelectPlayerComboBox";
-            this.SelectPlayerComboBox.Size = new System.Drawing.Size(170, 24);
+            this.SelectPlayerComboBox.Size = new System.Drawing.Size(170, 21);
             this.SelectPlayerComboBox.TabIndex = 6;
             // 
             // label2
@@ -98,7 +98,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(208, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 7;
             // 
             // label3
@@ -106,7 +106,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(208, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 17);
+            this.label3.Size = new System.Drawing.Size(114, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Previous Player Name:";
             // 
@@ -116,10 +116,11 @@
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Himalaya", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.Location = new System.Drawing.Point(19, 36);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(388, 84);
+            this.TitleLabel.Size = new System.Drawing.Size(306, 67);
             this.TitleLabel.TabIndex = 9;
             this.TitleLabel.Text = "Cleveland Trail";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TitleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
             // deletePlayerButton
             // 
@@ -148,6 +149,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NewPlayerButton);
             this.Name = "StartScreen";
+            this.Load += new System.EventHandler(this.StartScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

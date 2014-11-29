@@ -99,5 +99,24 @@ namespace Databases_Project
         {
             Application.Exit();
         }
+
+        private void InventoryListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextDayButton_Click(object sender, EventArgs e)
+        {
+            // create a new command object
+            SqlCommand cmd = new SqlCommand();
+            // make the connection obj and get the connection string from the Program Class
+            SqlConnection cnn = new SqlConnection(Program.connectionString);
+
+            cmd.CommandText = "EXEC Next_Day "; // create command 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
+        }
     }
 }

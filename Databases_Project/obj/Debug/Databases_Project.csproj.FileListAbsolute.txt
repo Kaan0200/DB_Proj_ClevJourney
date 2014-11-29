@@ -21,3 +21,6 @@ C:\Users\Kaan\Documents\Visual Studio 2012\Projects\Databases_Project\DB_Proj_Cl
 C:\Users\Joe\Documents\Case Western\EECS341\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.exe.config
 C:\Users\Joe\Documents\Case Western\EECS341\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.exe
 C:\Users\Joe\Documents\Case Western\EECS341\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.pdb
+C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.exe.config
+C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.exe
+C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.pdb

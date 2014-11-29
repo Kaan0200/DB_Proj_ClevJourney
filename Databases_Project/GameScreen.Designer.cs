@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +68,8 @@
             this.devControlsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(843, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(632, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,117 +80,125 @@
             this.newGameToolStripMenuItem,
             this.saveGameToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(58, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(45, 20);
             this.toolStripMenuItem1.Text = "Menu";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             // 
             // saveGameToolStripMenuItem
             // 
             this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.saveGameToolStripMenuItem.Text = "Save Game";
             // 
             // devControlsToolStripMenuItem
             // 
             this.devControlsToolStripMenuItem.Name = "devControlsToolStripMenuItem";
-            this.devControlsToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.devControlsToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.devControlsToolStripMenuItem.Text = "Dev Controls";
             // 
             // LogPanel
             // 
-            this.LogPanel.Location = new System.Drawing.Point(312, 52);
+            this.LogPanel.Location = new System.Drawing.Point(234, 42);
+            this.LogPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogPanel.Name = "LogPanel";
-            this.LogPanel.Size = new System.Drawing.Size(300, 250);
+            this.LogPanel.Size = new System.Drawing.Size(225, 203);
             this.LogPanel.TabIndex = 1;
             // 
             // ProgressBar
             // 
-            this.ProgressBar.Location = new System.Drawing.Point(312, 325);
+            this.ProgressBar.Location = new System.Drawing.Point(234, 264);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(300, 34);
+            this.ProgressBar.Size = new System.Drawing.Size(225, 28);
             this.ProgressBar.TabIndex = 2;
             // 
             // ProgressLabel
             // 
             this.ProgressLabel.AutoSize = true;
-            this.ProgressLabel.Location = new System.Drawing.Point(309, 305);
+            this.ProgressLabel.Location = new System.Drawing.Point(232, 248);
+            this.ProgressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProgressLabel.Name = "ProgressLabel";
-            this.ProgressLabel.Size = new System.Drawing.Size(120, 17);
+            this.ProgressLabel.Size = new System.Drawing.Size(88, 13);
             this.ProgressLabel.TabIndex = 3;
             this.ProgressLabel.Text = "Journey Progress";
             // 
             // NextDayButton
             // 
-            this.NextDayButton.Location = new System.Drawing.Point(312, 376);
+            this.NextDayButton.Location = new System.Drawing.Point(234, 306);
+            this.NextDayButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NextDayButton.Name = "NextDayButton";
-            this.NextDayButton.Size = new System.Drawing.Size(300, 30);
+            this.NextDayButton.Size = new System.Drawing.Size(225, 24);
             this.NextDayButton.TabIndex = 4;
             this.NextDayButton.Text = "Next Day";
             this.NextDayButton.UseVisualStyleBackColor = true;
+            this.NextDayButton.Click += new System.EventHandler(this.NextDayButton_Click);
             // 
             // SpecialButton
             // 
-            this.SpecialButton.Location = new System.Drawing.Point(482, 415);
+            this.SpecialButton.Location = new System.Drawing.Point(362, 337);
+            this.SpecialButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SpecialButton.Name = "SpecialButton";
-            this.SpecialButton.Size = new System.Drawing.Size(130, 30);
+            this.SpecialButton.Size = new System.Drawing.Size(98, 24);
             this.SpecialButton.TabIndex = 5;
             this.SpecialButton.Text = "Accept Offer";
             this.SpecialButton.UseVisualStyleBackColor = true;
             // 
             // WaitDayButton
             // 
-            this.WaitDayButton.Location = new System.Drawing.Point(312, 415);
+            this.WaitDayButton.Location = new System.Drawing.Point(234, 337);
+            this.WaitDayButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.WaitDayButton.Name = "WaitDayButton";
-            this.WaitDayButton.Size = new System.Drawing.Size(130, 30);
+            this.WaitDayButton.Size = new System.Drawing.Size(98, 24);
             this.WaitDayButton.TabIndex = 6;
             this.WaitDayButton.Text = "Wait Day";
             this.WaitDayButton.UseVisualStyleBackColor = true;
             // 
             // travelersDataView
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.travelersDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.travelersDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.travelersDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.travelersDataView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.travelersDataView.Location = new System.Drawing.Point(9, 72);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.travelersDataView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.travelersDataView.Location = new System.Drawing.Point(7, 58);
+            this.travelersDataView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.travelersDataView.Name = "travelersDataView";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.travelersDataView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.travelersDataView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.travelersDataView.RowHeadersWidth = 4;
             this.travelersDataView.RowTemplate.Height = 24;
             this.travelersDataView.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.travelersDataView.Size = new System.Drawing.Size(294, 373);
+            this.travelersDataView.Size = new System.Drawing.Size(220, 303);
             this.travelersDataView.TabIndex = 7;
             // 
             // crewBindingSource
@@ -205,9 +214,10 @@
             // CrewLabel
             // 
             this.CrewLabel.AutoSize = true;
-            this.CrewLabel.Location = new System.Drawing.Point(6, 52);
+            this.CrewLabel.Location = new System.Drawing.Point(4, 42);
+            this.CrewLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CrewLabel.Name = "CrewLabel";
-            this.CrewLabel.Size = new System.Drawing.Size(68, 17);
+            this.CrewLabel.Size = new System.Drawing.Size(51, 13);
             this.CrewLabel.TabIndex = 8;
             this.CrewLabel.Text = "Travelers";
             this.CrewLabel.UseMnemonic = false;
@@ -215,27 +225,30 @@
             // InventoryListBox
             // 
             this.InventoryListBox.FormattingEnabled = true;
-            this.InventoryListBox.ItemHeight = 16;
-            this.InventoryListBox.Location = new System.Drawing.Point(618, 72);
+            this.InventoryListBox.Location = new System.Drawing.Point(464, 58);
+            this.InventoryListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.InventoryListBox.Name = "InventoryListBox";
-            this.InventoryListBox.Size = new System.Drawing.Size(214, 228);
+            this.InventoryListBox.Size = new System.Drawing.Size(162, 186);
             this.InventoryListBox.TabIndex = 9;
+            this.InventoryListBox.SelectedIndexChanged += new System.EventHandler(this.InventoryListBox_SelectedIndexChanged);
             // 
             // InventoryLabel
             // 
             this.InventoryLabel.AutoSize = true;
-            this.InventoryLabel.Location = new System.Drawing.Point(618, 52);
+            this.InventoryLabel.Location = new System.Drawing.Point(464, 42);
+            this.InventoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InventoryLabel.Name = "InventoryLabel";
-            this.InventoryLabel.Size = new System.Drawing.Size(66, 17);
+            this.InventoryLabel.Size = new System.Drawing.Size(51, 13);
             this.InventoryLabel.TabIndex = 10;
             this.InventoryLabel.Text = "Inventory";
             this.InventoryLabel.UseMnemonic = false;
             // 
             // TossItemButton
             // 
-            this.TossItemButton.Location = new System.Drawing.Point(618, 306);
+            this.TossItemButton.Location = new System.Drawing.Point(464, 249);
+            this.TossItemButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TossItemButton.Name = "TossItemButton";
-            this.TossItemButton.Size = new System.Drawing.Size(214, 30);
+            this.TossItemButton.Size = new System.Drawing.Size(160, 24);
             this.TossItemButton.TabIndex = 11;
             this.TossItemButton.Text = "Toss Item";
             this.TossItemButton.UseVisualStyleBackColor = true;
@@ -243,9 +256,10 @@
             // UseItemButton
             // 
             this.UseItemButton.Enabled = false;
-            this.UseItemButton.Location = new System.Drawing.Point(618, 342);
+            this.UseItemButton.Location = new System.Drawing.Point(464, 278);
+            this.UseItemButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UseItemButton.Name = "UseItemButton";
-            this.UseItemButton.Size = new System.Drawing.Size(214, 30);
+            this.UseItemButton.Size = new System.Drawing.Size(160, 24);
             this.UseItemButton.TabIndex = 12;
             this.UseItemButton.Text = "Use Item";
             this.UseItemButton.UseVisualStyleBackColor = true;
@@ -253,18 +267,21 @@
             // LogLabel
             // 
             this.LogLabel.AutoSize = true;
-            this.LogLabel.Location = new System.Drawing.Point(309, 32);
+            this.LogLabel.Location = new System.Drawing.Point(232, 26);
+            this.LogLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LogLabel.Name = "LogLabel";
-            this.LogLabel.Size = new System.Drawing.Size(76, 17);
+            this.LogLabel.Size = new System.Drawing.Size(58, 13);
             this.LogLabel.TabIndex = 13;
             this.LogLabel.Text = "Travel Log";
             this.LogLabel.UseMnemonic = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(624, 378);
+            this.groupBox1.Location = new System.Drawing.Point(468, 307);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(207, 66);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(155, 54);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -275,10 +292,10 @@
             // 
             // GameScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(843, 454);
+            this.ClientSize = new System.Drawing.Size(632, 369);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LogLabel);
             this.Controls.Add(this.UseItemButton);
@@ -295,6 +312,7 @@
             this.Controls.Add(this.LogPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.Load += new System.EventHandler(this.GameScreen_Load);
