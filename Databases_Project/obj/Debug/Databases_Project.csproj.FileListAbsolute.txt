@@ -27,3 +27,8 @@ C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Database
 C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.exe.config
 C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.exe
 C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.pdb
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.csprojResolveAssemblyReference.cache
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.GameScreen.resources
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.StartScreen.resources
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.Properties.Resources.resources
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.csproj.GenerateResource.Cache

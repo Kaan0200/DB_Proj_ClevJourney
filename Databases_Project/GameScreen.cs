@@ -54,9 +54,11 @@ namespace Databases_Project
                 SqlDataReader reader = cmd.ExecuteReader();
                 object[] o = new object[2];
                 reader.GetValues(o);
-                numTravelers = int.Parse(o[0]);
-                dayNum = (int)(float.Parse(o[1]) * 10 + 1);
+                numTravelers = int.Parse(o[0].ToString());
+                dayNum = (int)(float.Parse(o[1].ToString()) * 10 + 1);
                 cnn.Close();
+            }
+            catch(Exception ex) {
             }
 
             this.ProgressBar.Value = (dayNum - 1) / 10;
@@ -143,16 +145,19 @@ namespace Databases_Project
 
             cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Remaining_Travelers FROM Player WHERE Player.Player_name = '" + currentPlayerName + '";
+            cmd.CommandText = "SELECT Remaining_Travelers FROM Player WHERE Player.Player_name = '" + currentPlayerName + "'";
             cmd.Connection = cnn;
 
-            try{ 
+            try
+            {
                 cnn.Open();
-                SQLDataReader reader = cmd.ExecuteReader();
-                object o;
-                reader.GetValue(o);
-                numTravelers = int.Parse(o[0]);
+                SqlDataReader reader = cmd.ExecuteReader();
+                object[] o = new object[1];
+                reader.GetValues(o);
+                numTravelers = int.Parse(o[0].ToString());
                 cnn.Close();
+            }
+            catch (Exception ex){
             }
 
             if (numTravelers == 0)
