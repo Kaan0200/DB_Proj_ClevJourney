@@ -32,3 +32,5 @@ C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases
 C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.StartScreen.resources
 C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.Properties.Resources.resources
 C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.csproj.GenerateResource.Cache
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.exe
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.pdb
