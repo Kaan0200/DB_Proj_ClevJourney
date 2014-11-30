@@ -137,7 +137,32 @@ namespace Databases_Project
             cmd.Connection = cnn;
 
             cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
-        }
+            
+            //Check win/loss conditions
+            dayNum++; //This need not be obtained from the database. We only need to get the number of remaining travelers.
 
+            cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT Remaining_Travelers FROM Player WHERE Player.Player_name = '" + currentPlayerName + '";
+            cmd.Connection = cnn;
+
+            try{ 
+                cnn.Open();
+                SQLDataReader reader = cmd.ExecuteReader();
+                object o;
+                reader.GetValue(o);
+                numTravelers = int.Parse(o[0]);
+                cnn.Close();
+            }
+
+            if (numTravelers == 0)
+                // This causes the player to lose the game. This may be a call to open a new window or put text in the game screen
+                // indicating that they lost the game.
+            ;
+            else if (dayNum > 10)
+               // This causes the player to win the game (i.e. they survived a full 10 days, and they go to the next day). Similar to the
+               // last statement, this may be a call to create a new window or type the victory message in the game screen.
+            ;
+        }
     }
 }
