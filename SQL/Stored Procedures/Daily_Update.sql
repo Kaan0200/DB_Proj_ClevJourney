@@ -49,5 +49,8 @@ WHERE Health <= 0
 UPDATE Player
 SET Remaining_Travelers = (select count(*) from Traveler where Traveler.Player_Name = Player.Player_Name)
 
+UPDATE Player
+SET DayNum = DayNum + 0.1
+
 
 GO

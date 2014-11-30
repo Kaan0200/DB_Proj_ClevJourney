@@ -24,3 +24,6 @@ C:\Users\Joe\Documents\Case Western\EECS341\DB_Proj_ClevJourney\Databases_Projec
 C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.exe.config
 C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.exe
 C:\Users\Kirtan\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.pdb
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\bin\Debug\Databases_Project.exe.config
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.exe
+C:\Users\JHoak\Desktop\DB_Proj_ClevJourney\Databases_Project\obj\Debug\Databases_Project.pdb

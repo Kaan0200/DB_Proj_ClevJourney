@@ -3,7 +3,8 @@ AS
 	INSERT INTO Player VALUES (
 		@P_Name,
 		250.00,
-		12
+		12,
+		0.0
 		);
 								--Name	   Warmth, Hunger, Health, Illness_Chance, Status_Id, Owner player
 	Insert INTO Traveler VALUES ('Tommas'  , 1.00, 1.00, 1.00, .1, ' ', @P_Name );

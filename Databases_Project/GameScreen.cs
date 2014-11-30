@@ -22,6 +22,9 @@ namespace Databases_Project
         private DataColumn statusColumn;
         private DataColumn healthColumn;
 		private DataColumn warmthColumn;
+        
+        private int numTravelers;
+        private int dayNum;
 
         public GameScreen(String playerName)
         {
@@ -40,6 +43,23 @@ namespace Databases_Project
             cnn = new SqlConnection(Program.connectionString); // initialize
 
             refreshTravelerTable();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT Remaining_Travelers, DayNum FROM Player WHERE Player.Player_name = '" + currentPlayerName + "'";
+            cmd.Connection = cnn;
+            try
+            {
+                cnn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                object[] o = new object[2];
+                reader.GetValues(o);
+                numTravelers = int.Parse(o[0]);
+                dayNum = (int)(float.Parse(o[1]) * 10 + 1);
+                cnn.Close();
+            }
+
+            this.ProgressBar.Value = (dayNum - 1) / 10;
 
             // TODO: This line of code loads data into the 'journeyGame_DBClassDataSet.Crew' table. You can move, or remove it, as needed.
             this.crewTableAdapter.Fill(this.journeyGame_DBClassDataSet.Crew);
@@ -118,5 +138,6 @@ namespace Databases_Project
 
             cnn.Open(); cmd.ExecuteNonQuery(); cnn.Close(); // open, do command, close
         }
+
     }
 }

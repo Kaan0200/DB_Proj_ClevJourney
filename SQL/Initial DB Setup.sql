@@ -3,7 +3,8 @@ CREATE PROC Initial_DB_Setup AS
 CREATE TABLE Player (
 	Player_Name varchar(100)  PRIMARY KEY, -- the user playing the game
 	Money       float(3),  -- the ingame money
-	Remaining_Travelers int -- how many people they still have alive, game is over at 0
+	Remaining_Travelers int, -- how many people they still have alive, game is over at 0
+	DayNum float(3) -- number of the ingame day, from 0.0 to 1.0; increases by 0.1 each "day"
 );
 
 CREATE TABLE Status (
