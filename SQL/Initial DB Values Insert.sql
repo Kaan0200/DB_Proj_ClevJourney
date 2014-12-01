@@ -1,6 +1,6 @@
 CREATE PROC Initial_DB_Values AS
 --						Status_Name, Effects, Value							
-INSERT INTO Status VALUES (' ', null, 0); --No status defect - Healthy.  Blank to make the other statuses stand out.
+INSERT INTO Status VALUES ('Healthy', null, 0);
 INSERT INTO Status VALUES('Nasal Drip', 'Health', .1);
 INSERT INTO Status VALUES ('Cough', 'Health', .1);
 INSERT INTO Status VALUES ('Infection', 'Health', .4);

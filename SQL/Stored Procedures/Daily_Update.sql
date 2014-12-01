@@ -1,4 +1,4 @@
-CREATE PROC Daily_Update
+CREATE PROC Daily_Update (@P_Name varchar(100))
 AS
 
 UPDATE Traveler
@@ -47,10 +47,12 @@ DELETE from Traveler
 WHERE Health <= 0
 
 UPDATE Player
-SET Remaining_Travelers = (select count(*) from Traveler where Traveler.Player_Name = Player.Player_Name)
+SET Remaining_Travelers = (select count(*) from Traveler where Traveler.Player_Name = @P_Name)
+WHERE Player_Name = @P_Name
 
 UPDATE Player
 SET DayNum = DayNum + 0.1
+WHERE Player_Name = @P_Name
 
 
 GO
